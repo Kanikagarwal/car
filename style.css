@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(clouds.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.background{
+background-image: url(grass.png);
+width: 100%;
+height: 60vh;
+position: absolute;
+bottom: 0;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.track{
+    background-image: url(track.png);
+    width:800vw;
+    height:500vh;
+    position: absolute;
+top: 38vh;
+background-repeat: repeat-x;
+/* animation: moveTrack 14s 1s linear infinite; */
+}
+h1{
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 40px;
+    font-family: 'Victor Mono', monospace;
+    display: block;
+}
+.car{
+    background-image: url(car.png);
+    position: absolute;
+    background-size: contain;
+    width: 30%;
+    height: 30%;
+    background-repeat: no-repeat;
+    top: 230px;
+    left: 120px;
+    z-index: 1;
+    /* animation: shake 2s 1s linear infinite; */
+}
+.wheel img{
+   /* border: 2px solid red; */
+    width: 13%;
+    height: 45%;
+    position: absolute;
+    top: 65px;
+    /* animation: rotate 1s infinite linear ;  */
+}
+.controls{
+  /* border: 2px solid red; */
+ position: absolute;
+ top: 44vh;
+ left:82%;
+ height: 30%;
+
+}
+.brake,.speed{
+    width: 35%;
+    transform: scale(1.3);
+    cursor:pointer;
+    transition: 0.1s;
+}
+
+#wheel-1 img{
+    left: 27px;
+}
+#wheel-2 img{
+    left: 218px;
+}
+
+@keyframes rotate {
+
+100%{
+    transform: rotate(360deg);
+}
+}
+
+@keyframes move {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@keyframes shake {
+    0%{
+transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(0px);
+
+    }
+    100%{
+        transform: translateY(-5px);
+
+    }
+}
+@keyframes moveTrack {
+   100%{
+    transform: translateX(-500vw);
+   }
+}
+
+@keyframes cloudMove {
+    
+}
